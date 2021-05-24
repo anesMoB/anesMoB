@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignUp"
+    android:orientation="vertical">
+    <ImageView
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/ic_baseline_restaurant_menu_24"
+        android:layout_gravity="center"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sign up"
+        android:textSize="32dp"
+        android:textColor="@color/colorBlack"
+        android:gravity="center"/>
+
+    <EditText
+        android:layout_marginTop="80dp"
+        android:id="@+id/email"
+        style="@style/EditT"
+        android:inputType="textEmailAddress"
+        android:hint="Email"/>
+
+    <EditText
+        android:id="@+id/password"
+        style="@style/EditT"
+        android:inputType="textPassword"
+        android:hint="Password"/>
+    <Button
+        android:id="@+id/btnSign_up"
+        style="@style/btn"
+        android:text="Sign up"/>
+    <TextView
+        android:id="@+id/sign_in"
+        style="@style/TextV"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="Already have an account? Sign in"/>
+
+</LinearLayout>
