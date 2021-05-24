@@ -43,16 +43,6 @@ public class SignUp extends AppCompatActivity {
         setContentView(R.layout.activity_sign_up);
         final Activity thisActivity=this;
 
-        /*sign_in=(TextView) findViewById(R.id.sign_in);
-        sign_in.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent=new Intent(thisActivity,Sign_in.class);
-                startActivity(intent);
-                finish();
-            }
-        });*/
-
         email=(EditText) findViewById(R.id.email);
         password=(EditText) findViewById(R.id.password);
         btnSign_up=(Button) findViewById(R.id.btnSign_up);
@@ -64,7 +54,6 @@ public class SignUp extends AppCompatActivity {
 
                 final String Semail=email.getText().toString();
                 final String Spassword=password.getText().toString();
-                /*if(isValidData(thisActivity,Semail, Spassword)) {*/
                     mAuth.createUserWithEmailAndPassword(Semail, Spassword)
                             .addOnCompleteListener(thisActivity, new OnCompleteListener<AuthResult>() {
                                 @Override
@@ -83,7 +72,7 @@ public class SignUp extends AppCompatActivity {
                                 }
                             });
                 }
-            //}
+
         });
     }
     static boolean isValidData(Activity thisActivity,String email,String password){

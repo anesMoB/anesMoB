@@ -39,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+        //----- Turn On Or Turn Off the Notification ---------
         final CheckBox reciveOrNot=findViewById(R.id.ReciveOrNot);
         // ReciveOhrNot is the CheckBox id
         reciveOrNot.setChecked(user.getR_n()==1);

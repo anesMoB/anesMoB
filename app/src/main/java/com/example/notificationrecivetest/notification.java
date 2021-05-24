@@ -14,17 +14,9 @@ public class notification extends FirebaseMessagingService {
 
     @Override
     public void onMessageReceived(RemoteMessage remoteMessage) {
-    //remoteMessage.getFrom()
 
-    // Check if message contains a data payload.
     if (remoteMessage.getData().size() > 0) {
         remoteMessage.getData();
-
-            /*if (true) {
-                scheduleJob();
-            } else {
-                handleNow();
-            }*/
 
     }
 
@@ -34,9 +26,6 @@ public class notification extends FirebaseMessagingService {
                 .setSmallIcon(R.drawable.ic_baseline_restaurant_menu_24)
                 .setContentTitle(remoteMessage.getNotification().getTitle())
                 .setContentText(remoteMessage.getNotification().getBody())
-
-
-                //   .setCustomContentView(remoteMessage.getNotification().getImageUrl())
                 .setPriority(NotificationCompat.PRIORITY_DEFAULT);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             int importance = NotificationManager.IMPORTANCE_DEFAULT;
