@@ -36,7 +36,8 @@ public class SignUp extends AppCompatActivity {
 
     private FirebaseAuth mAuth;
     private DatabaseReference mref;
-
+    String Semail;
+    String Spassword;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,8 +53,8 @@ public class SignUp extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                final String Semail=email.getText().toString();
-                final String Spassword=password.getText().toString();
+                 Semail=email.getText().toString();
+                 Spassword=password.getText().toString();
                     mAuth.createUserWithEmailAndPassword(Semail, Spassword)
                             .addOnCompleteListener(thisActivity, new OnCompleteListener<AuthResult>() {
                                 @Override
