@@ -33,7 +33,7 @@ import de.hdodenhof.circleimageview.CircleImageView;
 public class AboutUs extends AppCompatActivity {
     private static final int PICK_IMAGE = 1;
     Uri imageUri;
-    CircleImageView restaurantlogo;
+   // CircleImageView restaurantlogo;
     TextView phone,instagramAccount,facebookPage,restaurantName,email,stringEditing;
     EditText newString;
     Button addLogo;
